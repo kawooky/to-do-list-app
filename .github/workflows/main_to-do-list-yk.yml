@@ -20,10 +20,10 @@ jobs:
           include-prerelease: true
 
       - name: Restore NuGet packages
-        run: dotnet restore
+        run: dotnet restore TodoApi/TodoApi.csproj
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build TodoApi/TodoApi.csproj --configuration Release
 
       - name: dotnet publish
         run: dotnet publish TodoApi/TodoApi.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
