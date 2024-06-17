@@ -25,8 +25,11 @@ jobs:
       - name: Build with dotnet
         run: dotnet build TodoApi/TodoApi.csproj --configuration Release
 
-      - name: dotnet publish
+      - name: Publish with dotnet
         run: dotnet publish TodoApi/TodoApi.csproj -c Release -o ${{ github.workspace }}/myapp
+
+      - name: Verify Published Files
+        run: dir ${{ github.workspace }}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -49,6 +52,9 @@ jobs:
         with:
           name: .net-app
 
+      - name: Verify Downloaded Files
+        run: dir ./.net-app
+
       - name: Login to Azure
         uses: azure/login@v1
         with:
@@ -62,4 +68,4 @@ jobs:
         with:
           app-name: 'to-do-list-yk'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/myapp
+          package: ./.net-app
