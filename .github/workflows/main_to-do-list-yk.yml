@@ -34,7 +34,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: .net-app
+          name: dotnet-app
           path: ${{ github.workspace }}/myapp
 
   deploy:
@@ -50,10 +50,10 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: .net-app
+          name: dotnet-app
 
       - name: Verify Downloaded Files
-        run: dir ${{ github.workspace }}/.net-app
+        run: dir ${{ github.workspace }}/dotnet-app
 
       - name: Login to Azure
         uses: azure/login@v1
@@ -68,4 +68,4 @@ jobs:
         with:
           app-name: 'to-do-list-yk'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/.net-app
+          package: ${{ github.workspace }}/dotnet-app
