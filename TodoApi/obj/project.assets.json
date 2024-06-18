@@ -8293,11 +8293,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\YOUSSEFKAWOOK\\Desktop\\CTA\\C#\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "C:\\Users\\YOUSSEFKAWOOK\\Desktop\\CTA\\C#\\ToDoListApp\\ToDoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\YOUSSEFKAWOOK\\Desktop\\CTA\\C#\\TodoApi\\TodoApi.csproj",
+      "projectPath": "C:\\Users\\YOUSSEFKAWOOK\\Desktop\\CTA\\C#\\ToDoListApp\\ToDoApi\\TodoApi.csproj",
       "packagesPath": "C:\\Users\\YOUSSEFKAWOOK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\YOUSSEFKAWOOK\\Desktop\\CTA\\C#\\TodoApi\\obj\\",
+      "outputPath": "C:\\Users\\YOUSSEFKAWOOK\\Desktop\\CTA\\C#\\ToDoListApp\\ToDoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\YOUSSEFKAWOOK\\AppData\\Roaming\\NuGet\\NuGet.Config",
